@@ -1,0 +1,25 @@
+
+:root{
+  --rotating-cover-art-css-version: 'v1.0.0';
+}
+
+/*-----------------------------------------------------------------------------------------*/
+[data-test-id="PLAYERBAR_DESKTOP"] * .FullscreenPlayerDesktopButton_root__qGgoC {
+    border-radius: 50%;
+}
+
+[data-test-id="PLAYERBAR_DESKTOP"] * [data-test-id="ENTITY_COVER_IMAGE"] {
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*-----------------------------------------------------------------------------------------*/

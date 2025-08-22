@@ -1,0 +1,5 @@
+/*concerts*/
+[data-test-id="CONCERTS_TOP"],
+[data-test-id="CONCERTS_PERSONAL"] {
+    display: none;
+}

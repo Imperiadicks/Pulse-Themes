@@ -1,0 +1,283 @@
+{
+    "sections": [
+        {
+            "title": "Действия",
+            "items": [
+                {
+                    "id": "togglePlayerBackground",
+                    "name": "прозрачность",
+                    "description": "убирает весь background, там где это уместно",
+                    "type": "button",
+                    "bool": false,
+                    "defaultParameter": false
+                },
+                {
+                    "id": "gptSearch",
+                    "name": "Нейро-поиск",
+                    "description": "Включает поиск информации о треке и исполнителе через ChatGPT.",
+                    "type": "button",
+                    "bool": false,
+                    "defaultParameter": false
+                },
+                {
+                    "id": "useStream",
+                    "name": "Стримминг ответа GPT",
+                    "description": "Текст GPT будет показываться сразу в реальном времени. (Работает не на всех моделях!)",
+                    "type": "button",
+                    "bool": false,
+                    "defaultParameter": false
+                },
+                {
+                    "id": "useModel",
+                    "name": "Модель",
+                    "description": "Модель для поиска информации.",
+                    "type": "selector",
+                    "selected": 5,
+                    "options": {
+                        "1": {
+                            "name": "searchgpt"
+                        },
+                        "2": {
+                            "name": "gpt-4o-mini"
+                        },
+                        "3": {
+                            "name": "llama-3.3"
+                        },
+                        "4": {
+                            "name": "gemini-2.0-flash"
+                        },
+                        "5": {
+                            "name": "gemini-2.0-flash-mini"
+                        }
+                    },
+                    "defaultParameter": 5
+                }
+            ]
+        },
+        {
+            "title": "Эффекты",
+            "items": [
+                {
+                    "id": "enableBackgroundImage",
+                    "name": "Включить обновление фонового изображения",
+                    "description": "Включает или отключает автоматическое обновление фонового изображения.",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "FullVibe",
+                    "name": "Измените размера Vibe",
+                    "description": "Изменяет размер Vibe на 88vh, что делает вашу волну/vibe полноразмерным.",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": false
+                },
+                {
+                    "id": "enableAvatarZoom",
+                    "name": "Включить эффект зума аватара",
+                    "description": "Включает или отключает эффект зума при наведении на аватар.",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                }
+            ]
+        },
+        {
+            "title": "Фон",
+            "items": [
+                {
+                    "id": "autoBlackout",
+                    "name": "Нормализация яркости",
+                    "description": "Автоматическое нормирование яркости фона плеера",
+                    "type": "button",
+                    "bool": false,
+                    "defaultParameter": false
+                },
+                {
+                    "id": "brightness",
+                    "name": "Яркость (%)",
+                    "description": "Яркость фона полноэкранного плеера в процентах",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "value": 70,
+                    "defaultParameter": 70
+                },
+                {
+                    "id": "blur",
+                    "name": "Блюр (px)",
+                    "description": "Блюр фона полноэкранного плеера в пикселях",
+                    "type": "slider",
+                    "min": 0,
+                    "max": 30,
+                    "step": 1,
+                    "value": 5,
+                    "defaultParameter": 5
+                },
+                {
+                    "id": "backgroundImage",
+                    "name": "Фоновое изображение",
+                    "description": "Установить своё изображение для полноэкранного плеера",
+                    "type": "file",
+                    "filePath": "",
+                    "defaultParameter": {
+                        "filePath": ""
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Особое",
+            "items": [
+                {
+                    "id": "websocket",
+                    "name": "Настроки WebSocket",
+                    "description": "",
+                    "type": "text",
+                    "buttons": [
+                        {
+                            "id": "port",
+                            "name": "Порт",
+                            "text": "8765",
+                            "defaultParameter": "8765"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Open-Blocker",
+            "items": [
+                {
+                    "id": "NewbuttonHide",
+                    "name": "Подкасты",
+                    "description": "убирает подкасты",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": false
+                },
+                {
+                    "id": "OBdonations",
+                    "name": "Донаты",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBconcerts",
+                    "name": "Концерты",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBuserprofile",
+                    "name": "Профиль",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBtrailers",
+                    "name": "Трейлеры",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBvibeanimation",
+                    "name": "Анимация моей волны",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBrelevantnow",
+                    "name": "Актуально сейчас",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBinstyle",
+                    "name": "В стиле",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBlikesandhistory",
+                    "name": "Любимое и история",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBneuromusic",
+                    "name": "Нейромузыка",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBnewreleases",
+                    "name": "Новые релизы",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBpersonalartists",
+                    "name": "Личные артисты",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBpersonalplaylists",
+                    "name": "Настроили для вас",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBrecommendedplaylists",
+                    "name": "Исследуйте жанр",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBsmartopenplaylist",
+                    "name": "Премьера и т.д.",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBwaves",
+                    "name": "Больше открытий",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBartistrecommends",
+                    "name": "Артист рекомендует",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                },
+                {
+                    "id": "OBbarbelow",
+                    "name": "Рекламные беннеры",
+                    "type": "button",
+                    "bool": true,
+                    "defaultParameter": true
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "SpotColЛичная",
+  "image": "image.png",
+  "banner": "banner.png",
+  "author": ["imperiadicks"],
+  "description": "Spotify and Colorize",
+  "version": "1.9.0",
+  "type": "theme",
+  "css": "style.css",
+  "script": "script.js",
+  "tags": ["Spotify", "Colored", "theme"],
+  "allowedUrls": [
+        "https://raw.githubusercontent.com/Imperiadicks/SpotCol-Scripts/main/Assets/js",
+        "https://raw.githubusercontent.com/Imperiadicks/SpotCol-Scripts/main/Assets/css",
+        "https://raw.githubusercontent.com/Imperiadicks/SpotCol-Scripts/main/Assets/blocker-css",
+        "https://raw.githubusercontent.com/Imperiadicks/SpotCol-Scripts/main/Assets",
+        "https://ru.wikipedia.org/w/api.php?action=query&format=json&origin=*",
+        "https://api.onlysq.ru/ai/v2",
+        "http://127.0.0.1:2007/Assets/no-cover-image.png"
+    ]
+}

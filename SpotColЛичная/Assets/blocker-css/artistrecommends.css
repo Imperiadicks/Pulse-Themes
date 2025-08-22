@@ -1,0 +1,6 @@
+/*artistrecommends*/
+[data-test-id="ALBUM_PROMO"],
+[data-test-id="SIMPLE_ALBUM_PROMO"],
+[data-test-id="EDITORIAL_COMPILATION"] {
+    display: none;
+}

@@ -1,0 +1,4 @@
+/* Продолжить слушать */
+[data-test-id="CONTINUE_LISTEN"] {
+	display: none;
+}

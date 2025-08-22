@@ -1,0 +1,39 @@
+@keyframes backgroundMovement {
+    0% {
+        background-position: 20% 20%;
+        background-size: 110%;
+    }
+    25% {
+        background-position: 80% 20%;
+        background-size: 115%;
+    }
+    50% {
+        background-position: 80% 80%;
+        background-size: 120%;
+    }
+    75% {
+        background-position: 20% 80%;
+        background-size: 115%;
+    }
+    100% {
+        background-position: 20% 20%;
+        background-size: 110%;
+    }
+}
+
+[class*="MainPage_vibe"] {
+    animation: backgroundMovement 15s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+}
+
+[class*="PageHeaderBase_coverCell"] > div {
+    transition: all 0.2s ease-in-out;
+    border-radius: 332px;
+    &:hover {
+        border-radius: 12px;
+    }
+}
+.avatar-zoom {
+    cursor: zoom-in;
+    overflow: hidden;
+    transform-origin: center;
+}

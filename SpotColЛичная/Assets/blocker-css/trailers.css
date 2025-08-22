@@ -1,0 +1,5 @@
+/*trailers*/
+[data-test-id="TRAILER_BUTTON"],
+[data-test-id="CONTEXT_MENU_TRAILER_BUTTON"] {
+    display: none;
+}

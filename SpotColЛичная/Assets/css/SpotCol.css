@@ -1,0 +1,128 @@
+:root {
+  --SpotCol-css-version: 'v1.0.0';
+}
+
+
+/*--------------------------------------------*/
+.FullscreenPlayerDesktopContent_syncLyrics__6dTfH, .PlayQueue_root__ponhw
+{
+	height: calc(76vh);
+}
+[class*="PageHeaderBase_coverCell"] > div {
+    transition: all 0.2s ease-in-out;
+    border-radius: 332px;
+    &:hover {
+        border-radius: 12px;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------*/
+/* DevPanel
+/*--------------------------------------------*/
+.DevPanel_root__Gu7qn {
+	-webkit-app-region: no-drag;
+    position: absolute;
+    display: inline-block;
+	inset-block-end: auto;
+    inset-inline-end: 210px;
+	top:20px;
+	z-index: 9;
+}
+
+.DevPanel_panel__LnoO2 {
+    position: absolute;
+    width: 290px;
+    overflow: hidden;
+    inset-block-end: -220px;
+    inset-inline-end: 35px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+	-webkit-app-region: no-drag
+}
+
+.DevPanel_group__yDdVt,.DevPanel_panel__LnoO2 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--ym-outline-color-primary-disabled);
+    border-radius: var(--ym-radius-size-m);
+    padding: 5px;
+    gap: 5px;
+	-webkit-app-region: no-drag
+}
+
+.DevPanel_block__SJ_76 {
+    margin-inline-start:0;margin-inline-end:0}
+
+.DevPanel_changeLanguageBlock__WGj1D,.DevPanel_generativeBlock__CwcM2 {
+    display: flex;
+    align-items: center
+}
+
+.DevPanel_changeLanguageInput__nQ01C,.DevPanel_generativeInput__hYqt3 {
+    flex: 1 1;
+    margin: var(--ym-spacer-size-xxxs);
+    border-radius: var(--ym-radius-size-xs);
+    height: 25px;
+    min-height: 25px
+}
+/*--------------------------------------------*/
+
+/*ONLY display: none; SOON*/
+/*--------------------------------------------*/
+[data-test-id="VIBE_ANIMATION"],
+.UserProfile_userName__PTRuJ,
+.VibeButton_image__GOwKJ,
+.mdbxU6IWInQTsVjwnapn,
+.UserID-Avatar:after,
+.NewRelease_cover__EVFNR,
+.NavbarDesktop_logoWrapper__89ce6,
+.NewReleaseCard_type__1LjSl,
+.l66GiFKS1Ux_BNd603Cu,
+.Tab_image__Hen3_,
+.Tab_subtitle__fLp9S,
+body > div > p,
+.NewReleaseCard_trailerButton__wyoRL,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(1) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(1) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(2) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(2) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(3) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(3) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
+.Donations_root__xo2BC,
+.ConcertDate_weekday__fBZXo,
+.ConcertCard_button__GQxNL,
+.NavbarDesktop_pinsList___jXIM:before,
+.NavbarDesktop_pinsList___jXIM:after,
+.NavbarDesktop_scrollableContainer__HLc9D:before,
+.NavbarDesktop_scrollableContainer__HLc9D:after,
+.BarBelow_root__KFexT,
+.PlayQueue_root__ponhw:after,
+.PlayQueue_root__ponhw:before,
+.NewReleaseCard_type__cW58D,
+[data-test-id="ALBUM_PROMO"],
+[data-test-id="SIMPLE_ALBUM_PROMO"] {
+	display: none;
+}
+/*--------------------------------------------*/
+/*TitleBar*/
+/*--------------------------------------------*/
+.TitleBar_root__QjdOZ {
+	position: fixed;
+	user-select: unset;
+	height: 60px;
+	pointer-events: none;
+	--title-bar-button-width: 100%;
+}
+
+.TitleBar_button__9MptL {
+	width: 50px;
+	height: 60px;
+	pointer-events: auto;
+}
+.TitleBar_button__9MptL, .TitleBar_root__QjdOZ
+{
+	z-index: 1;
+}
+/*--------------------------------------------*/ 

@@ -1,0 +1,4 @@
+/* Альбом месяца */
+[data-test-id="EDITORIAL_NEW_RELEASES"] {
+	display: none;
+}

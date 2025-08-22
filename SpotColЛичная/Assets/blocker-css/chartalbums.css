@@ -1,0 +1,4 @@
+/* Чарт аудиокниг */
+[data-test-id="CHART_ALBUMS"] {
+	display: none;
+}

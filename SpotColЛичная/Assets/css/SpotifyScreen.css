@@ -1,0 +1,263 @@
+/*Spotify Screen*/
+:root{
+  --SpotifyScreen-css-version: 'v1.0.10';
+}
+
+/*------------------------------------------------------------------------------------*/
+/* Корневой контейнер */
+.Spotify_Screen {
+    height: 930px;
+    position: fixed;
+    right: 12px;
+    top: 61px;
+    z-index: 1;
+    width: 300px;
+    max-width: calc(-32px + 100vw);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--sm-accent, rgba(255, 255, 255, .3));
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 30px;
+    background: none;
+    color: rgb(255, 255, 255);
+    padding: 12px;
+}
+
+/* Фоновый блок — работает как холст для двухслойной подложки */
+.SM_Background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  --sm-background: none;
+  --sm-background-next: none;
+  --sm-blur: 24px;
+  --sm-brightness: 0.7;
+  --sm-brightness-correction: 1;
+}
+
+.SM_Background::before,
+.SM_Background::after {
+  content: '';
+  position: absolute;
+  inset: -20px; /* чуть больше, чтобы размытие было мягче */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter:
+    blur(var(--sm-blur))
+    brightness(calc(var(--sm-brightness) * var(--sm-brightness-correction)));
+  transition: opacity 500ms ease, filter 500ms ease;
+  opacity: 1;
+  z-index: 0;
+}
+
+/* текущий фон */
+.SM_Background::before {
+  background-image: var(--sm-background);
+  opacity: 1;
+}
+
+/* следующий фон */
+.SM_Background::after {
+  background-image: var(--sm-background-next);
+  opacity: 0;
+}
+
+/* включаем анимацию появления next-слоя */
+.SM_Background.animate::after {
+  opacity: 1;
+}
+
+/* Контентный слой над фоном */
+.SM_Content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+}
+
+/* Обложка (контейнер) */
+.SM_Cover {
+    aspect-ratio: 1 / 1;
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 20px var(--sm-accent, rgba(255, 255, 255, 0.15));
+}
+
+/* Картинки crossfade внутри обложки */
+.SM_Cover img._ui_cf {
+    position: absolute;
+    inset: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 600ms;
+    pointer-events: none;
+    will-change: opacity;
+}
+
+/* Тексты */
+.SM_Texts {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.SM_Track_Name {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.25;
+    color: var(--text, #fff);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.SM_Artist {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Низ — подчёркиваем выделение */
+.Spotify_Screen::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent, var(--sm-accent, rgba(255,255,255,0.5)), transparent);
+  opacity: .85;
+}
+
+/* Пульсация при проигрывании */
+@keyframes coverPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.Spotify_Screen.playing .SM_Cover img._ui_cf.current {
+  animation: coverPulse 4200ms ease-in-out infinite;
+}
+
+/* Адаптив */
+@media (max-width: 520px) {
+  .Spotify_Screen {
+    right: 12px;
+    left: 12px;
+    width: auto;
+    bottom: 12px;
+  }
+}
+
+.SM_Decorate_AddToPlaylist_Button {
+	position: absolute;
+	right: 15px;
+	content: url("http://localhost:2007/assets/SM-Decorate-AddToPlaylist-Button.png");
+	margin-top: 5px;
+}
+/* строка-заголовок с названием и сердцем */
+.SM_Title_Line{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    height: 50px;
+}
+
+.SM_Title_Line .SM_Track_Name{
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 25px;
+}
+
+/* сердце прижимаем к правому краю */
+.SM_Title_Line .LikeTrack{
+    flex:0 0 var(--size);
+    margin-left:auto;
+}
+
+.All_Info_Container {
+    position: absolute;
+    top: 365px;
+    left: 14px;
+    background: 0;
+    width: 275px;
+}
+
+.Artist_Info_Container {
+	height: auto;
+	background: var(--ym-surface-color-primary-enabled-list) !important;
+	width: 275px;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.Info_Title {
+	color: var(--ym-controls-color-primary-text-enabled_variant);
+	font-size: 16px;
+	font-weight: 700;
+	text-align: left;
+	padding: 6px;
+}
+
+.Search_Info {
+	margin-top: 5px;
+	padding: 0px 6px 0px 6px;
+}
+
+.Achtung_Alert {
+	color: #ff0;
+	text-align: center;
+	font-style: italic;
+	margin-top: 16px;
+	margin-bottom: 10px;
+	font-size: 13px;
+	background: 0;
+	padding: 6px;
+	width: 253px;
+	border-radius: 5px;
+}
+
+/*Neuro*/
+.GPT_Info_Container {
+	margin-top: 16px;
+	height: auto;
+	background: var(--ym-surface-color-primary-enabled-list);
+	width: 275px;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.GPT_Info_Title {
+	color: var(--ym-controls-color-primary-text-enabled_variant);
+	font-size: 16px;
+	font-weight: 700;
+	text-align: left;
+	padding: 6px;
+}
+
+.GPT_Search_Info {
+	margin-top: 5px;
+	padding: 0px 6px 0px 6px;
+}
+.SearchPage_root__TtwTi
+{
+	padding-block-start: 0px;
+}
+.LikeTrack
+{
+	left: -5px;
+	top: 8px;
+}
+/*--------------------------------------------*/

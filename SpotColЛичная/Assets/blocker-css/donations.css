@@ -1,0 +1,5 @@
+/*donations*/
+[data-test-id="ARTIST_DONATE_BUTTON"],
+[data-test-id="DONATIONS"] {
+    display: none;
+}

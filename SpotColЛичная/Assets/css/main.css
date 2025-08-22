@@ -1,0 +1,116 @@
+:root{
+  --main-css-version: 'v1.0.2';
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* main
+/*------------------------------------------------------------------------------------------------------------------------------*/
+.PSB-text{
+    display: none;
+}
+
+.Content_main__8_wIa {
+    flex-grow: 1;
+    border: 1px solid var(--ym-outline-color-primary-disabled);
+    border-radius: var(--ym-radius-size-xl);
+	top: 32px;
+	background: var(--ym-background-color-primary-enabled-content);
+	margin-right: 10vw;
+    position: fixed;
+	height: -webkit-fill-available;
+	margin-top: 30px;
+	margin-bottom: 88px;
+	left: 297px;
+	right: 11px;
+	border-radius: var(--ym-radius-size-l);
+	border-width: 0;
+}
+.MainPage_beta__y32vb{
+	visibility: hidden;
+}
+@media only screen and (max-width: 767.98px) {
+    .DefaultLayout_notificationErrorContainer__Qz_mD,.DefaultLayout_notificationInfoContainer__tKt7J {
+        inset-block-end:var(--ym-spacer-size-xxl);
+        width: 100%
+    }
+}
+
+.DefaultLayout_navbar__LIQWG {
+    grid-area: navbar
+}
+
+.DefaultLayout_navbar_application_macos__9dj3u {
+    margin-block-start:var(--ym-spacer-size-xxl)}
+
+.DefaultLayout_navbar_application_linux__ejlGn,.DefaultLayout_navbar_application_windows__3hDQ_ {
+    margin-block-start: calc(var(--ym-spacer-size-l)*-1)
+}
+
+.DefaultLayout_playerBar___9IaS {
+    grid-area: playerbar
+}
+
+.DefaultLayout_barBelow__y6PFU {
+    grid-area: barBelow
+}
+
+.DefaultLayout_compositePlayerBar___WAcQ {
+    display: flex;
+    position: fixed;
+    z-index: var(--ym-z-index-player);
+    flex-direction: column;
+    border-radius: var(--ym-radius-size-xl) var(--ym-radius-size-xl) 0 0;
+    background-color: var(--ym-background-color-primary-enabled-basic);
+    width: 100%;
+    inset-block-end: 0
+}
+
+.TopAdvertBanner_root__aAZ0o {
+    background-color: var(--ym-background-color-primary-enabled-content);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width:auto;
+    --scrollbar-hidden: transparent
+}
+
+.TopAdvertBanner_root_hidden__l3FTx {
+    display: none
+}
+
+.TopAdvertBanner_root__aAZ0o::-webkit-scrollbar-thumb {
+    border: 8px solid transparent;
+    border-radius: var(--ym-radius-size-l);
+    background-clip: content-box;
+    min-height: 50px
+}
+
+.TopAdvertBanner_root__aAZ0o::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0
+}
+.TextHeader_stickyItem_scrolling__YPBOL{
+	background: 0;
+	backdrop-filter: blur(3px);
+}
+.CompositeHeader_stickyChild_scrolling__wm9_D
+{
+	background: 0;
+	backdrop-filter: blur(3px);
+}
+.nHWc2sto1C6Gm0Dpw_l0{
+	background: 0;
+}
+.VibeContext_context__Z_82k{
+	backdrop-filter: blur(5px);
+	background: 0;
+}
+/*Player*/
+.PlayerBarDesktop_infoCard__tnLS6, .PlayerBarDesktop_info__56v53
+{
+	width: 70%;
+}
+.PlayerBarDesktop_sonata__sJHY_
+{
+	width: 135%;
+}

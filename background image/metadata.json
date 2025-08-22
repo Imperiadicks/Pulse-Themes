@@ -1,0 +1,17 @@
+{
+    "name": "background image",
+    "image": "image.png",
+    "banner": "banner.png",
+    "author": "maks1mio",
+    "description": "background vibe",
+    "version": "1.0.2",
+    "css": "style.css",
+    "script": "script.js",
+    "type": "script",
+    "tag": "script",
+    "fromPext": true,
+    "allowsURI": 
+    [
+        "http://127.0.0.1:2007"
+    ]
+}

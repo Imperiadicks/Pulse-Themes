@@ -1,0 +1,112 @@
+
+:root{
+  --user-css-version: 'v1.0.0';
+}
+
+/*BavBarUser*/
+/*--------------------------------------------*/
+[aria-label="Ваш профиль"] {
+	position: fixed;
+	right: 160px;
+	top: 13px;
+	-webkit-app-region: no-drag;
+}
+
+.UserProfile_dialog_desktop__0p006 {
+	position: fixed;
+	right: 100px;
+	left: calc(100% - 420px);
+	top: 70px;
+	bottom: calc(100% - 610px);
+    background-color: var(--ym-outline-color-primary-disabled);
+}
+
+.NavbarDesktopUserWidget_userProfileContainer__ha3Tm {
+	position: fixed;
+	pointer-events: none;
+	height: 635px;
+}
+
+.NavbarDesktopUserWidget_userProfileContainer__ha3Tm * * {
+	pointer-events: auto;
+}
+/*UserShow
+/*--------------------------------------------*/
+@media screen and (prefers-reduced-motion:reduce) {
+    .UserProfile_userId__Jb6Ix>button {
+        transition: none
+    }
+}
+
+.UserProfile_dialog__kQ8sz {
+    position: fixed;
+    z-index: var(--ym-z-index-player);
+    box-shadow: none;
+    background-color: var(--ym-background-color-primary-enabled-content);
+    max-height: calc(100vh - var(--user-top-distance) - var(--ym-spacer-size-xxxxxl))
+}
+
+.UserProfile_dialog_desktop__0p006 {
+    top: auto;
+    right: auto;
+    inset-block-end: calc(var(--user-top-distance) + var(--ym-spacer-size-l));
+    border: 1px solid var(--ym-controls-color-primary-outline-enabled)
+}
+
+.UserProfile_dialog_desktop__0p006,[dir=rtl] .UserProfile_dialog_desktop__0p006 {
+    left: auto;
+    inset-inline-start: var(--ym-spacer-size-xl)
+}
+
+.UserProfile_dialog__kQ8sz iframe {
+    max-height: calc(100vh - var(--user-top-distance) - var(--ym-spacer-size-xxxxxl))!important
+}
+
+@media only screen and (max-width: 767.98px) {
+    .UserProfile_dialog__kQ8sz iframe {
+        max-height:none!important
+    }
+
+    .UserProfile_dialog__kQ8sz {
+        max-height: none
+    }
+}
+
+.UserProfile_meta___okny {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ym-spacer-size-xxxs);
+    flex-grow: 1;
+    min-width: 0;
+    height: -moz-fit-content;
+    height: fit-content
+}
+
+/*--------------------------------------------*/
+
+/*UserProfile
+/*--------------------------------------------*/
+.NavbarDesktopUserWidget_userProfileContainer__ha3Tm {
+	position: fixed;
+	pointer-events: none;
+	height: 635px;
+}
+
+.UserProfile_plusLink__NhVsU {
+    transition: transform var(--ym-duration-transition);
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.UserProfile_plusLink__NhVsU:focus-visible,.UserProfile_plusLink__NhVsU:hover {
+    transform: scale(1.02)
+}
+
+.UserProfile_dialog_desktop__0p006 {
+	position: fixed;
+	right: 100px;
+	left: calc(100% - 420px);
+	top: 70px;
+	bottom: calc(100% - 610px);
+}
+/*--------------------------------------------*/

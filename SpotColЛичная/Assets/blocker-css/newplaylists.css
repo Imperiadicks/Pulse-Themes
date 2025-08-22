@@ -1,0 +1,4 @@
+/* Больше новой музыки */
+[data-test-id="NEW_PLAYLISTS"] {
+	display: none;
+}
